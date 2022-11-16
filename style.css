@@ -1,0 +1,70 @@
+.panels{
+  display:flex;
+  min-height:100vh;
+  overflow:hidden;
+}
+.panel {
+  display:flex;
+
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+  color:white;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+  transition:
+    font-size 0.7s,
+/*     flex 0.7s, */
+    background 0.2s;
+  
+  font-size:20px;
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  flex-direction:column;
+}
+.panel1 {
+  background-image:url(https://images.unsplash.com/photo-1609171712489-45b6ba7051a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3Vuc2V0JTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+}
+.panel2 {
+  background-image:url(https://images.unsplash.com/photo-1606764765380-105d13e2918b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9vbiUyMGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+.panel3 {
+  background-image:url(https://images.unsplash.com/photo-1532767153582-b1a0e5145009?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&w=1000&q=80);
+}
+.panel4 {
+  background-image:url(https://wallpaperaccess.com/full/783425.jpg);
+}
+.panel5 {
+  background-image:url(https://pradaandpearls.com/wp-content/uploads/2020/10/Blank-600-x-900-186.jpg);
+}
+.panel > *
+{
+  margin:0;
+  width:100%;
+/*   border: 2px solid red; */
+  display:flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items:center;
+  transition:transform 1s;
+}
+.panel > *:first-child
+{
+  transform: translateY(-100%);
+}
+.panel.open-active> *:first-child
+{
+  transform: translateY(0);
+}
+.panel > *:last-child
+{
+  transform: translateY(100%);
+}
+.panel.open-active> *:last-child
+{
+  transform: translateY(0);
+}
+.panel.open {
+  flex:5 0 auto;
+  font-size:50px;
+}
